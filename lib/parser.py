@@ -5,28 +5,29 @@ singleline_commands = {'read', 'remove', 'commit', 'exit'}
 
 
 def documentation():
-    return '''LIST OF COMMANDS AVAILABLE:
+    return '''START OF COMMANDS AVAILABLE:
 read: Read files
     read <comma separated filenames>
-
 write: Write contents to a file a file
     write <filename> <<EOF
     <contents>
     EOF
-
 remove: Remove files
     remove <comma separated filenames>
-
 commit: Set the commit message
     commit <message>
-
-comment: Set the multiline comment message
+comment: Set a multiline comment message
     comment <<EOF
     <message>
     EOF
-
 exit: Exit the program
     exit
+END OF COMMANDS AVAILABLE.
+
+EXAMPLE OF VALID COMMAND:
+comment <<EOF
+  this is an example of a multiline comment
+EOF
     '''
 
 
