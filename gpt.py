@@ -71,12 +71,12 @@ while True:
 
             if command["command"] == "comment":
                 set_output("comment_message", command["contents"])
-                user_message += f'comment stored: {command["contents"]}'
+                user_message += f'comment stored: {command["contents"]}\n'
 
             if command["command"] == "commit":
                 set_output("commit_message",
                            command["arg"] + " - Closes #" + issue_number)
-                user_message += f'commit message stored: {command["arg"]}'
+                user_message += f'commit message stored: {command["arg"]}\n'
 
             if command["command"] == "read":
                 files = command["arg"].split(",")
@@ -122,7 +122,7 @@ while True:
     except Exception as e:
         # Create an error string where any occurrence of `path` has been replaced with a period
         error = str(e).replace(path, ".")
-        user_message += f"error: {error}"
+        user_message += f"error: {error}\n"
         pass
 
     user_message = user_message.strip()
