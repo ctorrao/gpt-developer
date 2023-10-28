@@ -100,7 +100,8 @@ while True:
                 with open(file_path, "w") as f:
                     f.write(command["contents"])
 
-                formatting_errors = format_file(file_path)
+                #ignore formarting files
+                #formatting_errors = format_file(file_path)
 
                 with open(file_path, "r") as f:
                     code = format_code_with_line_numbers(f.read())
