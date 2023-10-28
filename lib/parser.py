@@ -23,11 +23,6 @@ comment: Set a multiline comment message
 exit: Exit the program
     exit
 END OF COMMANDS AVAILABLE.
-
-EXAMPLE OF A VALID COMMAND:
-comment <<EOF
-  this is an example of a multiline comment
-EOF
     '''
 
 
