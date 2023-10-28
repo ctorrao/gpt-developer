@@ -29,11 +29,11 @@ files = ", ".join(files)
 
 commands_doc = documentation()
 
-prompt = f"""Issue #{issue_number}: {issue_text}
+prompt = f"""ISSUE #{issue_number}: {issue_text}
 {commands_doc}
 Existing files: {files}
 You are interacting with software. Solve the issue detailed above using the commands documented above. You use commands to `read`, `write`, `remove` files in the code and then `comment` on the issue or `commit` the changes. `exit` to stop.
-You need to use the commands. The text you write is being parsed by a custom software that executes the commands. There's no human on the other end.
+You need to use the commands as the first sentence. The first word of the sentence should always be `read`, `write`, `remove`, `comment`, `commit` or `exit`. Never start with the word `Command`. The text you write is being parsed by a custom software that executes the commands. There's no human on the other end.
 """
 
 messages = [
