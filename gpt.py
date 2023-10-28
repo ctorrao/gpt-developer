@@ -105,10 +105,10 @@ while True:
 
                 with open(file_path, "r") as f:
                     code = format_code_with_line_numbers(f.read())
-                    if formatting_errors:
-                        user_message += f"wrote file `{filename}`:\n{code}\nPlease fix the formatting errors:\n{formatting_errors}\n"
-                    else:
-                        user_message += f"wrote file `{filename}`:\n{code}\n"
+#                    if formatting_errors:
+#                        user_message += f"wrote file `{filename}`:\n{code}\nPlease fix the formatting errors:\n{formatting_errors}\n"
+#                    else:
+                    user_message += f"wrote file `{filename}`:\n{code}\n"
 
             if command["command"] == "remove":
                 files = command["arg"].split(",")
